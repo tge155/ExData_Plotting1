@@ -9,7 +9,7 @@ subset <- dataset[dataset$Date >= "2007-02-01" & dataset$Date <= "2007-02-02",]
 
 # convert Date and Time
 datetime <- strptime(paste(subset$Date, subset$Time), "%Y-%m-%d %H:%M:%S")
-datetime <- as.POSIXct(subset$DateTime)
+datetime <- as.POSIXct(datetime)
 
 # plot
 png("~/Downloads/plot4.png", width=480, height=480)
